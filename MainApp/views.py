@@ -7,7 +7,11 @@ data = reform_json.country
 
 
 def main(request):
-    context = {
+    return render(request, 'index.html')
+
+
+def countries(request):
+    countries_list = {
         'country': data
     }
-    return render(request, 'index.html', context)
+    return render(request, 'countries_list.html', countries_list)
