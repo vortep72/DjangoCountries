@@ -7,8 +7,8 @@
   <body>
     <h2>Список стран</h2>
     <ul>
-    {% for country_name in countries %}
-    <li>{{country_name}}</li>
+    {% for country in countries %}
+    <li><<a href="/country/{{country.country}}">{{country.country}}</a></li>
     {% endfor %}
 </ul>
   </body>

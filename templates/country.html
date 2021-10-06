@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ country.country }}</title>
+  </head>
+  <body>
+    <h2>Страна: {{ country.country }}</h2>
+    <h3>Список языков</h3>
+    {% for lang in country.languages %}
+    <li><a href="/language/{{ language_name }}">{{ lang }}</a></li>
+    {% endfor %}
+<a href="{% url 'countries-list' %}">Список стран</a><br>
+
+<a href="{% url 'languages_list_page' %}">Языки</a>
+  </body>
+</html>
